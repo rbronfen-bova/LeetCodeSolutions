@@ -7,6 +7,12 @@ public static class BinaryIndexedTree
 
     public static BinaryIndexedTree<int> CreateIntegerMultiplication(int size) =>
         new(size, 1, (a, b) => a * b);
+
+    public static BinaryIndexedTree<int> CreateIntegerMin(int size) =>
+        new(size, int.MaxValue, Math.Min);
+
+    public static BinaryIndexedTree<int> CreateIntegerMax(int size) =>
+        new(size, int.MinValue, Math.Max);
 }
 
 public class BinaryIndexedTree<T>
